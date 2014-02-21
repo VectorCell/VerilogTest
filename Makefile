@@ -1,8 +1,6 @@
-FLAGS=-v
-
 test : Makefile
-	iverilog $(FLAGS) &*.v
-	vvp $*.out
+	iverilog -o hello.out hello.v
+	vvp hello.out
 
 clean :
 	rm -f *.out
